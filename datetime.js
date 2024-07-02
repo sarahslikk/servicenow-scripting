@@ -16,3 +16,18 @@ now.setFullYear(2020);
 gs.info('Changed year ' + now.getFullYear());
 
 gs.info('Local date string: ' + now.toLocaleDateString()); 
+
+//want to know what the date would be if it was 30 days after today's date
+var date = new Date();
+var later = date.getDate() + 30;
+gs.info(later);
+
+//doesn't know to wrap dates, so you need to modify
+
+var later2 = date.setDate(date.getDate() + 30);
+gs.info(new Date(later));
+
+//instead of taking date.getDate and adding thirty, taking number and setting date
+//set Date knows to follow the calendar. 
+
+
